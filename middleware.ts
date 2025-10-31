@@ -23,7 +23,7 @@ export function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/access-denied", req.url));
   }
 
-  if (path.includes("/director") && role !== "director") {
+  if (path.includes("/direccion") && role !== "direccion") {
     return NextResponse.redirect(new URL("/access-denied", req.url));
   }
 

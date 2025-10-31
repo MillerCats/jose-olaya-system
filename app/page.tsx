@@ -23,7 +23,7 @@ export default function Home() {
           Acceder como Docente
         </Link>
         <Link
-          href={"/dashboard/students"}
+          href={"/login?redirect=/dashboard/direccion"}
           className="bg-gray-50 rounded-xl p-8 text-gray-700 font-medium border border-gray-200 hover:border-gray-300 hover:bg-gray-100 hover:scale-104 transition duration-300"
         >
           Acceder como Director
