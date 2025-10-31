@@ -4,6 +4,7 @@
 import { db } from "@/data"
 import { users } from "@/data/schema"
 import { eq } from "drizzle-orm"
+import { revalidatePath } from "next/cache"
 
 export async function createUser(formData: {
   dni: string
@@ -24,6 +25,7 @@ export async function createUser(formData: {
       rolId: rolIdNumber
     }).returning()
 
+    revalidatePath("/dashboard/direccion")
     return {
       success: true,
       message: "Usuario creado exitosamente",
